@@ -1,0 +1,26 @@
+{% extends "movie/base.html" %}
+
+{% block title %}Movie Details{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ movie.name }}</h3>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item">Time &mdash; <strong>{{ movie.time }}</strong></li>
+                <li class="list-group-item">Date &mdash; <strong>{{ movie.date }}</strong></li>
+                <li class="list-group-item">Duration &mdash; <strong>{{ movie.duration }}</strong></li>
+                <li class="list-group-item">Ticket Price &mdash; <strong>{{ movie.ticket_price }}</strong></li>
+                <li class="list-group-item">Tickets Available &mdash; <strong>{{ movie.tickets_available }}</strong></li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

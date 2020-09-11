@@ -1,0 +1,42 @@
+{% extends "movie/base.html" %}
+{%load widget_tweaks%}
+{% block title %}book{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">booking</h3>
+            </div>
+
+            <form method="POST">{% csrf_token %}
+
+                <div class="panel-body">
+
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="contact_no">Please enter your Phone number</label>
+
+                                {% render_field form.contact_no class="form-control" rows="3" %}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <hr />
+                        <div class="col-lg-4">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

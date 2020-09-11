@@ -1,0 +1,50 @@
+{% extends "movie/base.html" %}
+{%load widget_tweaks%}
+{% block title %}Register{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Registration</h3>
+            </div>
+
+            <form method="POST">{% csrf_token %}
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="name">Please enter your name</label>
+
+                                {% render_field form.name class="form-control" rows="3" %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="contact_no">Please enter your Phone number</label>
+
+                                {% render_field form.contact_no class="form-control" rows="3" %}
+                            </div>
+                        </div>
+                        </div>
+
+
+                    <div class="row">
+                        <hr />
+                        <div class="col-lg-4">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
